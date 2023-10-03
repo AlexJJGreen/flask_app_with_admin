@@ -1,15 +1,15 @@
 from flask import Flask
 from flask_admin import Admin
-from flask_admin.contrib.sqla import ModelView
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_admin.contrib.sqla import ModelView
 
 # from flask_login import LoginManager
 from config import Config
 
-admin = Admin()
 db = SQLAlchemy()
 migrate = Migrate()
+admin = Admin(name="My Admin", template_mode="bootstrap3")
 # login = LoginManager()
 # login.login_view = "login"
 
@@ -29,3 +29,5 @@ def create_app():
 
 
 from app import models
+
+admin.add_view(ModelView(models.User, db.session))
