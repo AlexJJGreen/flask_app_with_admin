@@ -1,8 +1,31 @@
-# Folders to ignore
+# Ignore build output directories and venv
+bin/
+obj/
+venv/
 __pycache__/
 .vscode/
-venv/
+migrations/
 
-# Files to ignore
-app.db
+# Ignore dependency directories
+node_modules/
+packages/
+
+# Ignore compiled code
+*.class
+*.dll
+*.exe
+
+# Ignore log files
+*.log
+
+# Ignore configuration files with sensitive information
+*.config
+*.env
 .flaskenv
+
+#ingore notes docs and requirments
+*.txt
+
+#ignore db
+app.db
+config.py
