@@ -21,13 +21,21 @@ def create_app():
     db.init_app(app)
     migrate.init_app(app, db)
     # login.init_app(app)
-
     admin.init_app(app)
-    # Add admin views
+
+    from app.base import bp as base_bp
+
+    app.register_blueprint(base_bp)
+
+    from app.main import bp as main_bp
+
+    app.register_blueprint(main_bp)
 
     return app
 
 
+# Import models to avoid circular imports
 from app import models
 
+# Add admin views after model import
 admin.add_view(ModelView(models.User, db.session))

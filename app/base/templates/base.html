@@ -1,0 +1,57 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+    <title>{{ title }}</title>
+    {% endif %}
+    <link rel="stylesheet" href="{{ url_for('base.static', filename='css/normalize.css')}}">
+    <link rel="stylesheet" href="{{ url_for('base.static', filename='css/skeleton.css')}}">
+    <link rel="stylesheet" href="{{ url_for('base.static', filename='css/header.css')}}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="svg-container">
+            <svg viewbox="0 0 800 400" class="svg">
+                <path id="curve" fill="#50c6d8" d="M 800 300 Q 400 350 0 300 L 0 0 L 800 0 L 300 Z">
+
+                </path>
+            </svg>
+        </div>
+        <header>
+            <div id="logo">
+                <h1>Alex</h1>
+                <!--<img src="" alt="">-->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Home</a></li>
+                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                    <li><a href="http://" target="_blank" rel="noopener noreferrer">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="one column">
+                {% if page_title %}
+                <h1 id="page-title">{{ page_title }}</h1>
+                {% endif %}
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script src="{{ url_for('base.static', filename='js/scripts.js')}}"></script>
+</body>
+
+</html>
