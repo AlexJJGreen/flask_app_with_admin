@@ -28,6 +28,17 @@ a {
     text-align: center;
 }
 
+.text-white {
+    color: white;
+}
+
+/* element helpers */
+
+.bg-black {
+    background-color: black;
+}
+
+/* Header and Footer */
 
 .horizontal-nav li {
     /* You can add individual list item styles here if needed */
@@ -44,11 +55,27 @@ a {
     /* Smooth transition for hover effect */
 }
 
-.horizontal-nav a:hover {
+.horizontal-nav a:hover,
+.footer-nav a:hover {
     color: #D8B9FF;
     /* A simple hover effect, but you can change it */
 }
 
 .el-underline {
     border-bottom: #333 1px solid;
+}
+
+footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.footer-nav {
+    margin-bottom: 0;
+}
+
+.footer-nav a {
+    font-size: smaller;
+    transition: color 0.4s;
+    /* Smooth transition for hover effect */
 }
