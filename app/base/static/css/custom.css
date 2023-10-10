@@ -1,0 +1,54 @@
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+p,
+a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+/* Additional styling for our horizontal navigation */
+.horizontal-nav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* To remove default margin of the list */
+}
+
+/* text helpers */
+
+.text-center {
+    text-align: center;
+}
+
+
+.horizontal-nav li {
+    /* You can add individual list item styles here if needed */
+}
+
+.horizontal-nav a {
+    text-decoration: none;
+    /* To remove underline */
+    color: #333;
+    /* Basic color, but you can change it */
+    padding: 5px 10px;
+    /* Some padding for each link */
+    transition: color 0.4s;
+    /* Smooth transition for hover effect */
+}
+
+.horizontal-nav a:hover {
+    color: #D8B9FF;
+    /* A simple hover effect, but you can change it */
+}
+
+.el-underline {
+    border-bottom: #333 1px solid;
+}
