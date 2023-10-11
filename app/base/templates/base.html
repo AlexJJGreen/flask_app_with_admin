@@ -11,23 +11,25 @@
     <link rel="stylesheet" href="{{ url_for('base.static', filename='css/header.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;600;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('base.static', filename='css/custom.css')}}">
 </head>
 
 <body>
     <div class="container">
         <header>
-            <div class="row">
+            <div class="row bg-dark">
                 <div class="one column"></div>
                 <div id="logo">
-                    <h1 class="text-center">Alexander John James Green</h1>
+                    <h2 class="text-white style-title">Alexander John James Green</h2>
                     <!--<img src="" alt="">-->
                 </div>
             </div>
             <div class="row el-underline">
                 <nav class="twelve columns">
-                    <ul class="horizontal-nav">
+                    <div id="menuIcon" class="menu-icon">&#9776;</div> <!-- Burger icon -->
+                    <ul id="menu" class="horizontal-nav">
                         <li><a href="http://" target="_blank" rel="noopener noreferrer">Home</a></li>
                         <li><a href="http://" target="_blank" rel="noopener noreferrer">Blog</a></li>
                         <li><a href="http://" target="_blank" rel="noopener noreferrer">Contact</a></li>
@@ -38,10 +40,10 @@
     </div>
 
     <div class="container">
-        <div class="row">
+        <div class="row el-underline">
             <div class="one column">
                 {% if page_title %}
-                <h1 id="page-title">{{ page_title }}</h1>
+                <h1 id="page-title" class="style-title">{{ page_title }}</h1>
                 {% endif %}
             </div>
         </div>
@@ -49,7 +51,7 @@
         {% endblock %}
     </div>
 
-    <footer class="bg-black">
+    <footer class="bg-dark">
         <nav>
             <ul class="footer-nav">
                 <li><a class="text-white" href="#">Home</a></li>

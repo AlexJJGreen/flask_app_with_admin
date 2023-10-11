@@ -1,16 +1,50 @@
+:root {
+    --color-green-600: #25a278;
+}
+
+/* fonts */
+
 h1,
 h2,
 h3,
 h4 {
     font-family: 'Inter', sans-serif;
-    font-weight: 700;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: 500;
 }
 
 p,
 a {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
+
+li {
+    margin-top: 1rem;
+}
+
+p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* text */
+
+.style-title {
+    padding-top: 2rem;
+}
+
+/* #### HEADER #### */
 
 /* Additional styling for our horizontal navigation */
 .horizontal-nav {
@@ -21,6 +55,53 @@ a {
     margin: 0;
     /* To remove default margin of the list */
 }
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .horizontal-nav {
+        display: flex;
+        flex-direction: row;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    /* prevent stacked menu when changing screen width */
+}
+
+@media (max-width: 767px) {
+
+    /* Adjust this breakpoint as needed */
+    .horizontal-nav {
+        display: none;
+        /* Initially hide the menu */
+        flex-direction: column;
+        /* Stack the links vertically */
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    /* Add a class for the expanded state */
+    .horizontal-nav.expanded {
+        display: flex;
+        flex-direction: column;
+        max-height: 12rem;
+        /* Adjust this value based on the maximum height your menu can take. */
+    }
+
+    .menu-icon {
+        display: block;
+        /* Show the burger icon */
+    }
+}
+
 
 /* text helpers */
 
@@ -36,6 +117,10 @@ a {
 
 .bg-black {
     background-color: black;
+}
+
+.bg-dark {
+    background-color: #1c1c1c;
 }
 
 /* Header and Footer */
@@ -66,8 +151,8 @@ a {
 }
 
 footer {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .footer-nav {
