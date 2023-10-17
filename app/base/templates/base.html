@@ -28,7 +28,8 @@
             </div>
             <div class="row el-underline">
                 <nav class="twelve columns">
-                    <div id="menuIcon" class="menu-icon">&#9776;</div> <!-- Burger icon -->
+                    <div id="menuIcon" class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+                    <!-- Burger icon -->
                     <ul id="menu" class="horizontal-nav">
                         <li><a href="http://" target="_blank" rel="noopener noreferrer">Home</a></li>
                         <li><a href="http://" target="_blank" rel="noopener noreferrer">Blog</a></li>
@@ -47,6 +48,19 @@
                 {% endif %}
             </div>
         </div>
+        <!-- Main Article -->
+        <div class="row bg-dark article-main-container">
+            <a href="#">
+                <div class="one-half column article-main-img-container">
+                    <img class="u-max-full-width" src="https://placehold.co/400x300" alt="an img">
+                </div>
+                <div class="one-half column article-main-text-container">
+                    <h2 class="text-white">War in the Middle East</h2>
+                    <p class="article-date-slug">posted: 05/10/23</p>
+                    <p class="article-snippet">War in the middle east seems likely because of x y z</p>
+                </div>
+            </a>
+        </div>
         {% block content %}
         {% endblock %}
     </div>
@@ -62,7 +76,7 @@
         </nav>
 
     </footer>
-
+    <script src="https://kit.fontawesome.com/3c7e38d30f.js" crossorigin="anonymous"></script>
     <script src="{{ url_for('base.static', filename='js/scripts.js')}}"></script>
 </body>
 

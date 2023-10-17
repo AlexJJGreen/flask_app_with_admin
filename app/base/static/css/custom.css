@@ -1,3 +1,11 @@
+/* GLOBAL */
+
+i {
+    color: black;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
 :root {
     --color-green-600: #25a278;
 }
@@ -25,17 +33,18 @@ p,
 a {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 li {
-    margin-top: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 p {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 /* text */
@@ -59,47 +68,6 @@ p {
 .menu-icon {
     display: none;
     cursor: pointer;
-}
-
-@media (min-width: 768px) {
-    .horizontal-nav {
-        display: flex;
-        flex-direction: row;
-        max-height: none;
-        overflow: visible;
-    }
-
-    .menu-icon {
-        display: none;
-    }
-
-    /* prevent stacked menu when changing screen width */
-}
-
-@media (max-width: 767px) {
-
-    /* Adjust this breakpoint as needed */
-    .horizontal-nav {
-        display: none;
-        /* Initially hide the menu */
-        flex-direction: column;
-        /* Stack the links vertically */
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-    }
-
-    /* Add a class for the expanded state */
-    .horizontal-nav.expanded {
-        display: flex;
-        flex-direction: column;
-        max-height: 12rem;
-        /* Adjust this value based on the maximum height your menu can take. */
-    }
-
-    .menu-icon {
-        display: block;
-        /* Show the burger icon */
-    }
 }
 
 
@@ -163,4 +131,81 @@ footer {
     font-size: smaller;
     transition: color 0.4s;
     /* Smooth transition for hover effect */
+}
+
+
+/* Article Components */
+
+.article-main-container {
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+}
+
+.article-main-text-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.article-date-slug {
+    color: #aaa;
+    font-size: x-small;
+}
+
+.article-snippet {
+    color: #fff;
+}
+
+
+/* ####### MEDIA QUERIES ########## */
+
+@media (min-width: 768px) {
+    .horizontal-nav {
+        display: flex;
+        flex-direction: row;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    /* prevent stacked menu when changing screen width */
+}
+
+@media (max-width: 767px) {
+
+    /* Adjust this breakpoint as needed */
+    .horizontal-nav {
+        display: none;
+        /* Initially hide the menu */
+        flex-direction: column;
+        /* Stack the links vertically */
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    /* Add a class for the expanded state */
+    .horizontal-nav.expanded {
+        display: flex;
+        flex-direction: column;
+        max-height: 12rem;
+        /* Adjust this value based on the maximum height your menu can take. */
+    }
+
+    .menu-icon {
+        display: block;
+        /* Show the burger icon */
+    }
+
+    .style-title {
+        font-size: 2rem;
+    }
+
+    .article-main-text-container {
+        height: auto;
+    }
 }
