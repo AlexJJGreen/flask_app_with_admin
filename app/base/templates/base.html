@@ -49,35 +49,76 @@
             </div>
         </div>
         <!-- Main Article -->
-        <div class="row bg-dark article-main-container">
-            <a href="#">
-                <div class="one-half column article-main-img-container">
-                    <img class="u-max-full-width" src="https://placehold.co/400x300" alt="an img">
+        <div class="article">
+            <div class="row bg-dark article-main-container">
+                <a href="#">
+                    <div class="one-half column article-main-img-container">
+                        <img class="u-max-full-width" src="https://placehold.co/400x300" alt="an img">
+                    </div>
+                    <div class="one-half column article-main-text-container">
+                        <div class="article-title-container">
+                            <h2 class="text-white">War in the Middle East</h2>
+                            <p class="article-date-slug">posted: 05/10/23</p>
+                        </div>
+                        <p class="article-snippet">War in the middle east seems likely because of x y z</p>
+                    </div>
+                </a>
+            </div>
+            <div class="row bg-dark article-supplementary-container">
+                <div class="twelve columns">
+                    <div class="keywords">
+                        <a href="#">#Finance</a>
+                        <a href="#">#Business</a>
+                        <a href="#">#Geopolitics</a>
+                    </div>
                 </div>
-                <div class="one-half column article-main-text-container">
-                    <h2 class="text-white">War in the Middle East</h2>
-                    <p class="article-date-slug">posted: 05/10/23</p>
-                    <p class="article-snippet">War in the middle east seems likely because of x y z</p>
-                </div>
-            </a>
+            </div>
         </div>
-        {% block content %}
-        {% endblock %}
-    </div>
+        <!-- End Main Article -->
+        <div class="row">
+            <div class="six columns">
+                <div class="article article-secondary">
+                    <div class="article-second-img-container">
+                        <img class="u-max-full-width" src="https://placehold.co/400x300" alt="an img">
+                    </div>
+                    <div class="article-second-text-container">
+                        <div class="article-title-container">
+                            <h2 class="">War in the Middle East</h2>
+                            <p class="article-date-slug">posted: 05/10/23</p>
+                        </div>
+                        <p class="article-snippet">War in the middle east seems likely because of x y z</p>
+                    </div>
+                </div>
+            </div>
+            <div class="three columns article">
+                <div class="article">
+                    kjsdbf
+                </div>
+            </div>
+            <div class="three columns">
+                <div class="article">
+                    sdfds
+                </div>
+            </div>
+        </div>
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
 
-    <footer class="bg-dark">
-        <nav>
-            <ul class="footer-nav">
-                <li><a class="text-white" href="#">Home</a></li>
-                <li><a class="text-white" href="#">Blog</a></li>
-                <li><a class="text-white" href="#">Contact</a></li>
-                <li><a class="text-white" href="#">Impressum / Legal</a></li>
-            </ul>
-        </nav>
+        <footer class="bg-dark">
+            <nav>
+                <ul class="footer-nav">
+                    <li><a class="text-white" href="#">Home</a></li>
+                    <li><a class="text-white" href="#">Blog</a></li>
+                    <li><a class="text-white" href="#">Contact</a></li>
+                    <li><a class="text-white" href="#">Impressum / Legal</a></li>
+                </ul>
+            </nav>
 
-    </footer>
-    <script src="https://kit.fontawesome.com/3c7e38d30f.js" crossorigin="anonymous"></script>
-    <script src="{{ url_for('base.static', filename='js/scripts.js')}}"></script>
+        </footer>
+        <script src="https://kit.fontawesome.com/3c7e38d30f.js" crossorigin="anonymous"></script>
+        <script src="{{ url_for('base.static', filename='js/scripts.js')}}"></script>
 </body>
 
 </html>
