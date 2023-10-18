@@ -54,6 +54,188 @@ p {
     padding-top: 2rem;
 }
 
+
+:root {
+    --color-black: #000;
+    --color-dk: #222;
+    --color-white: #fff;
+    --color-transparent-white: hsla(0, 0%, 100%, 0);
+    --color-blue-100: #e6ebff;
+    --color-blue-200: #c3cbff;
+    --color-blue-300: #9ba2ff;
+    --color-blue-400: #7573ff;
+    --color-blue-500: #4f4fff;
+    --color-blue-600: #3523ff;
+    --color-blue-700: #2800d7;
+    --color-blue-800: #0d1e7a;
+    --color-blue-900: #02124b;
+    --color-gray-100: #f8f8f8;
+    --color-gray-200: #efefef;
+    --color-gray-300: #ccc;
+    --color-gray-400: #b3b3b3;
+    --color-gray-500: #999;
+    --color-gray-600: #767676;
+    --color-gray-700: #545454;
+    --color-gray-800: #3c3c3c;
+    --color-gray-900: #262626;
+    --color-gray-1000: #1c1c1c;
+    --color-red-100: #fff0f0;
+    --color-red-200: #ffd8d6;
+    --color-red-300: #ffa6a6;
+    --color-red-400: #ff7570;
+    --color-red-500: #f34f4e;
+    --color-red-600: #e42918;
+    --color-red-700: #ba121d;
+    --color-red-800: #8e1010;
+    --color-red-900: #690303;
+    --color-green-100: #f0f7f5;
+    --color-green-200: #c1f6e4;
+    --color-green-300: #7eedc8;
+    --color-green-400: #30d8a0;
+    --color-green-500: #2abd8c;
+    --color-green-600: #25a278;
+    --color-green-700: #0a8059;
+    --color-green-800: #07593b;
+    --color-green-900: #08452f;
+    --color-yellow-100: #fdf6d2;
+    --color-yellow-200: #feee9e;
+    --color-yellow-300: #fee76d;
+    --color-yellow-400: #ffdf3d;
+    --color-yellow-500: #ffd600;
+    --color-yellow-600: #cbaa04;
+    --color-yellow-700: #977d09;
+    --color-yellow-800: #63510d;
+    --color-yellow-900: #493b05;
+    --color-qt-navy: #131638;
+}
+
+html,
+body {
+    /* define height for footer */
+    height: 100%;
+}
+
+/* Grid
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* ----- GLOBAL ----- */
+
+.flex-container {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.gutter {
+    width: 10%;
+}
+
+/* -------- COMMON ELEMENTS -------- */
+
+.article {
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+}
+
+.article-row {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.article-row:first-child {
+    margin-left: 0;
+}
+
+.article-row:last-child {
+    margin-right: 0;
+}
+
+.article-secondary {
+    flex: 2;
+}
+
+.article-tertiary-col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.article-content {
+    margin: 1rem;
+}
+
+
+.article-tertiary {}
+
+/* -------- UNIQUE IDs ------- */
+
+#wrapper,
+#wrapper-header,
+#wrapper-main,
+#wrapper-footer {
+    width: 100%;
+}
+
+#wrapper {
+    /* align column, height min 100 of vh for sticky footer */
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+#wrapper-main {
+    /* fill available space to footer */
+    flex: 1;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#wrapper-header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-bottom: solid black 1px;
+}
+
+#wrapper-content {
+    flex-direction: column;
+    flex: 1;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#wrapper-footer {
+    align-self: flex-end;
+    margin-top: 1rem;
+}
+
+#article-main {
+    display: flex;
+    flex: 1;
+    background: black;
+}
+
+/* ----- Decoaration ----- */
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-dark {
+    background-color: #333;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+/* ----- FONTS ------ */
+
+.color-white {
+    color: #fff;
+}
+
+
 /* #### HEADER #### */
 
 /* Additional styling for our horizontal navigation */
@@ -97,6 +279,14 @@ p {
     border-top: solid black 1px;
 }
 
+.flex-1 {
+    flex: 1;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
 /* Header and Footer */
 
 .horizontal-nav li {
@@ -118,10 +308,6 @@ p {
 .footer-nav a:hover {
     color: #D8B9FF;
     /* A simple hover effect, but you can change it */
-}
-
-.el-underline {
-    border-bottom: #333 1px solid;
 }
 
 footer {
@@ -200,6 +386,13 @@ footer {
 
 .article-second-img-container {
     padding: 1rem;
+}
+
+/* ------------------ IMG ------------------- */
+
+img.responsive {
+    max-width: 100%;
+    height: auto;
 }
 
 
