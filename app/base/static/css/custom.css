@@ -18,8 +18,8 @@ h2,
 h3,
 h4 {
     font-family: 'Inter', sans-serif;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    letter-spacing: -0.25rem;
+    margin-bottom: 1rem;
 }
 
 h1 {
@@ -34,6 +34,15 @@ p,
 a {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
+    color: #000;
+}
+
+a:hover {
+    color: #000;
+}
+
+p {
+    margin-bottom: 1rem;
 }
 
 li {
@@ -41,17 +50,14 @@ li {
     margin-bottom: 0;
 }
 
-p {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
+
 
 /* text */
 
 .style-title {
     padding-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 
@@ -130,44 +136,6 @@ body {
 
 /* -------- COMMON ELEMENTS -------- */
 
-.article {
-    border-top: solid black 1px;
-    border-bottom: solid black 1px;
-}
-
-.article-row {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.article-row:first-child {
-    margin-left: 0;
-}
-
-.article-row:last-child {
-    margin-right: 0;
-}
-
-.article-secondary {
-    flex: 2;
-}
-
-.article-tertiary-col {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: stretch;
-    justify-content: space-between;
-}
-
-.article-content {
-    margin: 1rem;
-}
-
-
-.article-tertiary {}
-
 /* -------- UNIQUE IDs ------- */
 
 #wrapper,
@@ -213,59 +181,22 @@ body {
     display: flex;
     flex: 1;
     background: black;
+    margin-top: 1rem;
 }
 
-/* ----- Decoaration ----- */
 
-.bg-black {
-    background-color: black;
+/* ----------------------------------- text helpers -------------------------------------------- */
+
+.text-center {
+    text-align: center;
 }
-
-.bg-dark {
-    background-color: #333;
-}
-
-.bg-white {
-    background-color: #fff;
-}
-
-/* ----- FONTS ------ */
 
 .color-white {
     color: #fff;
 }
 
 
-/* #### HEADER #### */
-
-/* Additional styling for our horizontal navigation */
-.horizontal-nav {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    /* To remove default margin of the list */
-}
-
-.menu-icon {
-    display: none;
-    cursor: pointer;
-}
-
-
-/* text helpers */
-
-.text-center {
-    text-align: center;
-}
-
-.text-white {
-    color: white;
-}
-
-
-/* element helpers */
+/* --------------------------------- element helpers ------------------------------------------- */
 
 .bg-black {
     background-color: black;
@@ -287,7 +218,32 @@ body {
     flex-direction: column;
 }
 
-/* Header and Footer */
+.space-between {
+    justify-content: space-between;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+
+/* ----------------------- Header and Footer-------------------------------------------- */
+
+
+/* Additional styling for our horizontal navigation */
+.horizontal-nav {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /* To remove default margin of the list */
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
 
 .horizontal-nav li {
     /* You can add individual list item styles here if needed */
@@ -326,11 +282,45 @@ footer {
 }
 
 
-/* Article Components */
+/* ------------------------------------------ Article Components ------------------------------------ */
 
 .article {
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.article-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.article-row:first-child {
+    margin-left: 0;
+}
+
+.article-row:last-child {
+    margin-right: 0;
+}
+
+.article-secondary {
+    flex: 2;
+}
+
+.article-tertiary-col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.article-content {
     margin: 1rem;
 }
+
+.article-tertiary {}
 
 .article-main-container {
     padding: 1rem;
@@ -365,27 +355,43 @@ footer {
 
 }
 
+.article-keywords {
+    border-top: dotted black 1px;
+}
+
+.article-keywords-main {
+    border-top: dotted white 1px;
+    border-bottom: solid white 1px;
+}
+
 .keywords {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .keywords a {
-    font-size: xx-small;
-    color: white;
+    font-size: 0.7rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    transition: color 0.3s;
 }
 
 .keywords a:hover {
     color: var(--color-lilac-300);
 }
 
+
+/* ---------------------- ARTICLE SECONDARY -------------------------- */
+
 .article-secondary {}
 
 .article-second-img-container {
     padding: 1rem;
+}
+
+.article-content-main {
+    margin: 1rem;
 }
 
 /* ------------------ IMG ------------------- */
@@ -444,5 +450,21 @@ img.responsive {
 
     .article-main-text-container {
         height: auto;
+    }
+
+    .article-row {
+        flex-direction: column;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+
+        letter-spacing: -0.1rem;
+    }
+
+    #article-main {
+        flex-direction: column-reverse;
     }
 }
