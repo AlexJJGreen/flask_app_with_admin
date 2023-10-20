@@ -10,7 +10,7 @@ WYSIWYG Editor
 
 
 {% block content %}
-<form id="content-form" action="" method="">
+<form id="content-form" class="flex-container align-stretch flex-col mt-1" action="" method="">
     <!--  
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(140), index=True)
@@ -19,28 +19,30 @@ WYSIWYG Editor
     content = db.Text()
 
     -->
-    <div class="mb-3">
+    <div class="flex-1">
         <label for="content-title">Post Title</label>
         <input type="text" class="form-control" id="content-title" value="{% if post %}{{ post.title }}{% endif %}">
     </div>
-    <div class="mb-3">
+    <div class="flex-1">
         <label for="content-snippet">Post Snippet</label>
         <textarea class="form-control" id="content-snippet" cols="30"
             rows="5">{% if post %}{{ post.snippet }}{% endif %}</textarea>
     </div>
-    <div class="mb-3">
+    <div class="flex-1">
         <label for="content-thumbnail-url">Post Main Image URL</label>
         <input class="form-control" type="text" id="content-thumbnail-url"
             value="{% if post %}{{ post.thumbnail_url}}{% endif %}">
     </div>
-    <div class="mb-3">
+    <div class="flex-1 mb-1">
         <label for="editor">Post Content</label>
         <div id="editor"></div>
     </div>
-    <input type="submit" class="button-primary" value="Save">
-    <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#myModal">
-        Delete
-    </button>
+    <div class="flex-1 mb-1">
+        <input type="submit" class="button-primary" value="Save">
+        <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#myModal">
+            Delete
+        </button>
+    </div>
 </form>
 
 <!-- The Modal -->
