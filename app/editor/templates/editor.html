@@ -20,25 +20,25 @@ WYSIWYG Editor
 
     -->
     <div class="mb-3">
-        <label for="content-title">Content Title</label>
+        <label for="content-title">Post Title</label>
         <input type="text" class="form-control" id="content-title" value="{% if post %}{{ post.title }}{% endif %}">
     </div>
     <div class="mb-3">
-        <label for="content-snippet">Content Snippet</label>
+        <label for="content-snippet">Post Snippet</label>
         <textarea class="form-control" id="content-snippet" cols="30"
             rows="5">{% if post %}{{ post.snippet }}{% endif %}</textarea>
     </div>
     <div class="mb-3">
-        <label for="content-thumbnail-url">Content Thumbnail URL</label>
+        <label for="content-thumbnail-url">Post Main Image URL</label>
         <input class="form-control" type="text" id="content-thumbnail-url"
             value="{% if post %}{{ post.thumbnail_url}}{% endif %}">
     </div>
     <div class="mb-3">
-        <label for="editor">Content</label>
+        <label for="editor">Post Content</label>
         <div id="editor"></div>
     </div>
-    <input type="submit" class="btn btn-primary" value="Save">
-    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#myModal">
+    <input type="submit" class="button-primary" value="Save">
+    <button type="button" class="button" data-bs-toggle="modal" data-bs-target="#myModal">
         Delete
     </button>
 </form>
@@ -61,8 +61,8 @@ WYSIWYG Editor
 
             <!-- Modal Footer -->
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                <button id="deleteBtn" type="button" class="btn btn-success" data-bs-dismiss="modal">Yes</button>
+                <button type="button" class="button-primary" data-bs-dismiss="modal">No</button>
+                <button id="deleteBtn" type="button" class="button" data-bs-dismiss="modal">Yes</button>
             </div>
 
         </div>
