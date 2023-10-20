@@ -31,6 +31,10 @@ def create_app():
 
     app.register_blueprint(main_bp)
 
+    from app.editor import bp as editor_bp
+
+    app.register_blueprint(editor_bp)
+
     return app
 
 
